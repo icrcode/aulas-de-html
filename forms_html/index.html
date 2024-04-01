@@ -2,38 +2,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Formulários em HTML</title>
 </head>
 <body>
     <form>
-        <div>
             <fieldset>
                 <legend>Dados Pessoais</legend>
                 <label for="name">Nome do Cliente:</label> <input type="text" id="name" name="user_name">
             </fieldset>
-        </div>
-         
-        <div>
+
             <fieldset>
                 <legend>Qual o tamanho de sua camisa?</legend>
-                <!-- atenção ao uso do radio -->
                 <p>
-                  <input type="radio" name="tamanho" id="tamanho_1" value="p" />
-                  <label for="tamanho_1">P</label>
-                  <!-- ele responde ao for presente na label-->
+                <input type="radio" name="tamanho" id="tamanho_1" value="p" />
+                <label for="tamanho_1">P</label>
                 </p>
                 <p>
-                  <input type="radio" name="tamanho" id="tamanho_2" value="m" />
-                  <label for="tamanho_2">M</label>
+                <input type="radio" name="tamanho" id="tamanho_2" value="m" />
+                <label for="tamanho_2">M</label>
                 </p>
                 <p>
-                  <input type="radio" name="tamanho" id="tamanho_3" value="g" />
-                  <label for="tamanho_3">G</label>
+                <input type="radio" name="tamanho" id="tamanho_3" value="g" />
+                <label for="tamanho_3">G</label>
                 </p>
-              </fieldset>
-         </div>
-
-         <div>
+            </fieldset>
+         
             <fieldset>
                 <legend>Quais itens adicionais você quer no seu pedido?</legend>
                 <p>
@@ -45,20 +39,17 @@
                     <input type="checkbox" id="item2" name="melanciaa" value="Melancia">
                 </p> 
             </fieldset>
-         </div>
-         <div>
+         
             <fieldset>
                 <legend> Dados Pessoais</legend>
                 <p>Qual seus dados? <abbr title="required">*</abbr>.</p>
 
-                <!-- Isso é jóia: -->
                 <div>
                 <label for="nome">Name:</label>
                 <input type="text" name="nome">
                 <label for="nome"><abbr title="required">*</abbr></label>
                 </div>
 
-                <!-- Esse me muito jóia: -->
                 <div>
                 <label for="idade">
                     <span>Idade:</span>
@@ -67,13 +58,31 @@
                 </label>
                 </div>
 
-                <!-- Esse é a boa prática na veia: -->
                 <div>
                 <label for="sexo">Sexo: <abbr title="required">*</abbr></label>
                 <input id="sexo" type="text" name="sexo">
                 </div>
             </fieldset>
-         </div>
+         
+      </form>
+
+      <form action="pagina-processa-dados-do-form.js" method="post">
+        <div>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="usuario_nome" />
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="usuario_email" />
+        </div>
+        <div>
+          <label for="msg">Mensagem:</label>
+          <textarea id="msg" name="usuario_msg"></textarea>
+        </div>
+      
+        <div class="button">
+          <button type="submit">Enviar sua mensagem</button>
+        </div>
       </form>
       
 </body>
