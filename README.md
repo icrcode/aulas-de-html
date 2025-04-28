@@ -1,2 +1,2 @@
-# Forms-Sao-Legais
-Estudo sobre formulários html
+# Repositório focado no ensino da linguagem HTML. 
+Estudo sobre formulários html.
