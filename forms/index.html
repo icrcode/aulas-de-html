@@ -1,0 +1,101 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="validaDados.js"></script>
+  
+  <title>Formulários em HTML</title>
+</head>
+
+<body>
+
+  <form action="validaDados.js" method="post">
+
+    <!-- Dados Pessoais -->
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="usuario_nome" required>
+      </div>
+
+      <div>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="usuario_idade" required>
+      </div>
+
+      <div>
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="usuario_sexo" required>
+      </div>
+
+      <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="usuario_email" required>
+      </div>
+
+    </fieldset>
+
+    <!-- Tamanho da Camisa -->
+    <fieldset>
+      <legend>Qual o tamanho de sua camisa?</legend>
+
+      <div>
+        <input type="radio" id="tamanho_p" name="usuario_tamanho" value="P" required>
+        <label for="tamanho_p">P</label>
+      </div>
+
+      <div>
+        <input type="radio" id="tamanho_m" name="usuario_tamanho" value="M">
+        <label for="tamanho_m">M</label>
+      </div>
+
+      <div>
+        <input type="radio" id="tamanho_g" name="usuario_tamanho" value="G">
+        <label for="tamanho_g">G</label>
+      </div>
+
+    </fieldset>
+
+    <!-- Itens Adicionais -->
+    <fieldset>
+      <legend>Itens adicionais do pedido</legend>
+
+      <div>
+        <input type="checkbox" id="item_batata" name="item_batata" value="Batata">
+        <label for="item_batata">Batata</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="item_melancia" name="item_melancia" value="Melancia">
+        <label for="item_melancia">Melancia</label>
+      </div>
+
+    </fieldset>
+
+    <!-- Mensagem -->
+    <fieldset>
+      <legend>Mensagem</legend>
+
+      <div>
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg" name="usuario_msg" rows="5"></textarea>
+      </div>
+
+    </fieldset>
+
+
+    <div class="button">
+      <button type="submit">Enviar sua mensagem</button>
+    </div>
+
+  </form>
+
+</body>
+
+</html>
