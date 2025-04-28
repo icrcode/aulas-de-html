@@ -1,11 +1,11 @@
 // validaDados.js
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
+    const form = document.getElementById('formulario');
   
     form.addEventListener('submit', function (event) {
       let isValid = true;
-      const requiredFields = ['usuario_nome', 'usuario_idade', 'usuario_sexo', 'usuario_email'];
+      const requiredFields = ['nome', 'idade', 'sexo', 'email'];
   
       requiredFields.forEach(function (fieldId) {
         const field = document.getElementById(fieldId);

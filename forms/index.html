@@ -1,19 +1,15 @@
-
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-
-  <script src="validaDados.js"></script>
-  
+  <script src="validaDados.js" defer></script>
   <title>Formulários em HTML</title>
 </head>
 
 <body>
 
-  <form action="validaDados.js" method="post">
+  <form id="formulario" method="post">
 
     <!-- Dados Pessoais -->
     <fieldset>
@@ -30,7 +26,7 @@
       </div>
 
       <div>
-        <label for="sexo">Sexo:</label>
+        <label for="sexo">Gênero:</label>
         <input type="text" id="sexo" name="usuario_sexo" required>
       </div>
 
@@ -45,17 +41,17 @@
     <fieldset>
       <legend>Qual o tamanho de sua camisa?</legend>
 
-      <div>
+      <div class="radio-group">
         <input type="radio" id="tamanho_p" name="usuario_tamanho" value="P" required>
         <label for="tamanho_p">P</label>
       </div>
 
-      <div>
+      <div class="radio-group">
         <input type="radio" id="tamanho_m" name="usuario_tamanho" value="M">
         <label for="tamanho_m">M</label>
       </div>
 
-      <div>
+      <div class="radio-group">
         <input type="radio" id="tamanho_g" name="usuario_tamanho" value="G">
         <label for="tamanho_g">G</label>
       </div>
@@ -66,12 +62,12 @@
     <fieldset>
       <legend>Itens adicionais do pedido</legend>
 
-      <div>
+      <div class="checkbox-group">
         <input type="checkbox" id="item_batata" name="item_batata" value="Batata">
-        <label for="item_batata">Batata</label>
+        <label for="item_batata">Bermuda</label>
       </div>
 
-      <div>
+      <div class="checkbox-group">
         <input type="checkbox" id="item_melancia" name="item_melancia" value="Melancia">
         <label for="item_melancia">Melancia</label>
       </div>
@@ -88,7 +84,6 @@
       </div>
 
     </fieldset>
-
 
     <div class="button">
       <button type="submit">Enviar sua mensagem</button>
